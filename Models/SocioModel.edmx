@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FINALWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SOCIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="60" />
+          <Property Name="APELLIDO" Type="varchar" MaxLength="60" />
+          <Property Name="CEDULA" Type="varchar" MaxLength="40" />
+          <Property Name="FOTO" Type="varbinary(max)" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="60" />
+          <Property Name="NUMERO_CONTACTO" Type="varchar" MaxLength="40" />
+          <Property Name="SEXO" Type="varchar" MaxLength="20" />
+          <Property Name="EDAD" Type="varchar" MaxLength="10" />
+          <Property Name="FECHA_NACIMIENTO" Type="date" />
+          <Property Name="FAMILIARES" Type="varchar" MaxLength="80" />
+          <Property Name="TIPO_MEMBRESIA" Type="varchar" MaxLength="40" />
+          <Property Name="LUGAR_TRABAJO" Type="varchar" MaxLength="40" />
+          <Property Name="DIRECCION_OFICINA" Type="varchar" MaxLength="40" />
+          <Property Name="TEL_OFICINA" Type="varchar" MaxLength="40" />
+          <Property Name="ESTADO_MENBRESIA" Type="varchar" MaxLength="20" />
+          <Property Name="FECHA_INGRESO" Type="date" />
+          <Property Name="FECHA_SALIDA" Type="date" />
+        </EntityType>
+        <EntityContainer Name="FINALWebModelStoreContainer">
+          <EntitySet Name="SOCIOS" EntityType="Self.SOCIOS" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FINALWebModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SOCIOS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NOMBRE" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDO" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="CEDULA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DIRECCION" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="NUMERO_CONTACTO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="SEXO" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="EDAD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_NACIMIENTO" Type="DateTime" Precision="0" />
+          <Property Name="FAMILIARES" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="TIPO_MEMBRESIA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="LUGAR_TRABAJO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION_OFICINA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="TEL_OFICINA" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ESTADO_MENBRESIA" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA_INGRESO" Type="DateTime" Precision="0" />
+          <Property Name="FECHA_SALIDA" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="FINALWebEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SOCIOS" EntityType="Self.SOCIOS" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FINALWebModelStoreContainer" CdmEntityContainer="FINALWebEntities">
+          <EntitySetMapping Name="SOCIOS">
+            <EntityTypeMapping TypeName="FINALWebModel.SOCIOS">
+              <MappingFragment StoreEntitySet="SOCIOS">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+                <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="NUMERO_CONTACTO" ColumnName="NUMERO_CONTACTO" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+                <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+                <ScalarProperty Name="FAMILIARES" ColumnName="FAMILIARES" />
+                <ScalarProperty Name="TIPO_MEMBRESIA" ColumnName="TIPO_MEMBRESIA" />
+                <ScalarProperty Name="LUGAR_TRABAJO" ColumnName="LUGAR_TRABAJO" />
+                <ScalarProperty Name="DIRECCION_OFICINA" ColumnName="DIRECCION_OFICINA" />
+                <ScalarProperty Name="TEL_OFICINA" ColumnName="TEL_OFICINA" />
+                <ScalarProperty Name="ESTADO_MENBRESIA" ColumnName="ESTADO_MENBRESIA" />
+                <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+                <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

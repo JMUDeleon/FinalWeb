@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FINALWebModelStoreContainer" CdmEntityContainer="FINALWebEntities">
+    <EntitySetMapping Name="SOCIOS">
+      <EntityTypeMapping TypeName="FINALWebModel.SOCIOS">
+        <MappingFragment StoreEntitySet="SOCIOS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+          <ScalarProperty Name="CEDULA" ColumnName="CEDULA" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+          <ScalarProperty Name="NUMERO_CONTACTO" ColumnName="NUMERO_CONTACTO" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="FECHA_NACIMIENTO" ColumnName="FECHA_NACIMIENTO" />
+          <ScalarProperty Name="FAMILIARES" ColumnName="FAMILIARES" />
+          <ScalarProperty Name="TIPO_MEMBRESIA" ColumnName="TIPO_MEMBRESIA" />
+          <ScalarProperty Name="LUGAR_TRABAJO" ColumnName="LUGAR_TRABAJO" />
+          <ScalarProperty Name="DIRECCION_OFICINA" ColumnName="DIRECCION_OFICINA" />
+          <ScalarProperty Name="TEL_OFICINA" ColumnName="TEL_OFICINA" />
+          <ScalarProperty Name="ESTADO_MENBRESIA" ColumnName="ESTADO_MENBRESIA" />
+          <ScalarProperty Name="FECHA_INGRESO" ColumnName="FECHA_INGRESO" />
+          <ScalarProperty Name="FECHA_SALIDA" ColumnName="FECHA_SALIDA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

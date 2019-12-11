@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FINALWebModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SOCIOS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="60" />
+    <Property Name="APELLIDO" Type="varchar" MaxLength="60" />
+    <Property Name="CEDULA" Type="varchar" MaxLength="40" />
+    <Property Name="FOTO" Type="varbinary(max)" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="60" />
+    <Property Name="NUMERO_CONTACTO" Type="varchar" MaxLength="40" />
+    <Property Name="SEXO" Type="varchar" MaxLength="20" />
+    <Property Name="EDAD" Type="varchar" MaxLength="10" />
+    <Property Name="FECHA_NACIMIENTO" Type="date" />
+    <Property Name="FAMILIARES" Type="varchar" MaxLength="80" />
+    <Property Name="TIPO_MEMBRESIA" Type="varchar" MaxLength="40" />
+    <Property Name="LUGAR_TRABAJO" Type="varchar" MaxLength="40" />
+    <Property Name="DIRECCION_OFICINA" Type="varchar" MaxLength="40" />
+    <Property Name="TEL_OFICINA" Type="varchar" MaxLength="40" />
+    <Property Name="ESTADO_MENBRESIA" Type="varchar" MaxLength="20" />
+    <Property Name="FECHA_INGRESO" Type="date" />
+    <Property Name="FECHA_SALIDA" Type="date" />
+  </EntityType>
+  <EntityContainer Name="FINALWebModelStoreContainer">
+    <EntitySet Name="SOCIOS" EntityType="Self.SOCIOS" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
